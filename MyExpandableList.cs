@@ -10,7 +10,7 @@
         {
             if (!_readOnly)
             {
-                int newSize = _elements.Length + 1;
+                int newSize = _size + 1;
 
                 if (newSize > _elements.Length)
                 {
@@ -34,6 +34,16 @@
         {
             get { return _readOnly; }
             set { _readOnly = value; }
+        }
+
+        public int NumberOfElementsInList
+        {
+            get { return _size; }
+        }
+
+        public int Capacity
+        {
+            get { return _elements.Length; }
         }
     }
 }
